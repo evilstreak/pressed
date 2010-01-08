@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[% post.title %] - My blog</title>
+  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>[% post.title %]</h1>
+
+  <div id="content">
+    [% post.content %]
+  </div>
+</body>
+</html>

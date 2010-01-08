@@ -1,0 +1,7 @@
+{
+  "files" : "/Users/dom/blog",
+  "db" : {
+    "host" : "localhost",
+    "collection" : "local.blog"
+  }
+}

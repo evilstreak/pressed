@@ -1,0 +1,30 @@
+#!/usr/bin/env flusspferd
+// -*- mode:javascript; -*- vim:filetype=javascript:enc=utf-8:
+
+var args = require('system').args;
+var app, baseModules;
+
+if (args[1] != '--no-reload') {
+  print("Running lucidity in reloader mode...");
+  app = function(request) {
+    // Flusspferd specific - unload modules on request
+    for (i in require.module_cache) {
+      delete require.module_cache[i];
+    }
+    gc();
+
+    return require('../lib/app').app(request);
+  }
+}
+else {
+  print("Running lucidity normal mode...");
+  app = require( '../lib/app' ).app
+}
+
+var server = require( 'zest' ).Zest( {
+  handler: app
+} );
+
+server.start();
+
+

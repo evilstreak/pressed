@@ -1,0 +1,91 @@
+/* reset */
+
+* { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: inherit; }
+strong, em, code { font-style: inherit; font-weight: inherit; }
+
+/* site wide */
+
+body {
+  background: #fff;
+  color: #444;
+  font: 14px/21px "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  margin: 0 auto;
+  width: 640px;
+}
+
+h1 {
+  color: #000;
+  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  margin: 21px 0;
+}
+
+p, ul, ol, pre {
+  margin-bottom: 21px;
+}
+
+h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-top: 42px;
+  padding-bottom: 10px;
+}
+
+code {
+  background: #ccc;
+  color: #000;
+  font-family: Monaco, Consolas, monospace;
+  white-space: nowrap;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  white-space: inherit;
+}
+
+pre {
+  background: #fff;
+  border: 2px solid #ccc;
+  color: #000;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+ins {
+  background: #d8fcce;
+  color: green;
+  text-decoration: none;
+}
+
+p.note {
+  border-left: 5px solid #d11;
+  padding-left: 5px;
+}
+
+a {
+  color: #18d;
+}
+
+a:hover {
+  background: #18d;
+  color: #fff;
+  text-decoration: none;
+}
+
+h3 {
+  color: #000;
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+}
+
+strong {
+  color: #000;
+  font-weight: bold;
+}
