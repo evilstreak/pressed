@@ -5,10 +5,21 @@
   <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>[% post.title %]</h1>
+  <article>
+    <h1>[% post.title %]</h1>
 
-  <div id="content">
     [% post.content %]
-  </div>
+  <article>
+
+  <aside>
+    <section>
+      <h1>Tags</h1>
+      <ul>
+        [% FOREACH t IN tags %]
+          <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
+            [% t.key %] ([% t.value %])</a></li>
+        [% END %]
+      </ul>
+  </aside>
 </body>
 </html>

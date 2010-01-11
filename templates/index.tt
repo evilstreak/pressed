@@ -7,25 +7,11 @@
 <body>
   <h1>Blog posts</h1>
 
-  <h2>Published</h2>
-  <ul>
-    [% FOREACH p IN published %]
-      <li><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></li>
-    [% END %]
-  </ul>
-
-  <h2>Pending</h2>
-  <ul>
-    [% FOREACH p IN pending %]
-      <li><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></li>
-    [% END %]
-  </ul>
-
-  <h2>Drafts</h2>
-  <ul>
-    [% FOREACH p IN drafts %]
-      <li><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></li>
-    [% END %]
-  </ul>
+  [% FOREACH p IN recent %]
+    <article>
+      <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
+      <p>[% p.content %]</p>
+    </article>
+  [% END %]
 </body>
 </html>
