@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog posts</title>
+  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Blog posts</h1>
+
+  [% FOREACH p IN posts %]
+    <article>
+      <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
+      <ul>
+        [% FOREACH t IN p.tags %]
+          <li><a href="[% juice.urlFor( "/tags/", t ) %]">
+            [% t %]</a></li>
+        [% END %]
+      </ul>
+    </article>
+  [% END %]
+</body>
+</html>
