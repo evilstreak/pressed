@@ -1,6 +1,10 @@
 Pressed: blog software for Juice
 ================================
 
+BIG WARNING: This app has a very unstable API. If you start coding
+against it expect stuff to break. Things should settle down in a month
+or so after it's smoother.
+
 Pressed is a blog application written for [Juice] which can either be
 used standalone or embedded in your own application.
 
