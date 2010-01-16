@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blog posts</title>
-  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <h1>Blog posts</h1>
-
-  [% FOREACH p IN recent %]
-    <article>
-      <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
-      <p>[% p.content %]</p>
-    </article>
-  [% END %]
-</body>
-</html>
+[% WRAPPER templates/_wrapper.tt
+   title = "evilstreak.co.uk" %]
+[% FOREACH p IN recent %]
+  <article>
+    <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
+    <p>[% p.content %]</p>
+  </article>
+[% END %]
+[% END %]
