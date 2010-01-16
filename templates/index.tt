@@ -3,7 +3,10 @@
 [% FOREACH p IN recent %]
   <article>
     <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
-    <p>[% p.content %]</p>
+    [% IF p.short %]
+      [% p.short %]
+      <p class="more"><a href="[% juice.urlFor( "/b/", p._id ) %]">Read the rest &raquo;</a></p>
+    [% ELSE; GET p.content; END %]
   </article>
 [% END %]
 [% END %]

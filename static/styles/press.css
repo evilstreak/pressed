@@ -249,3 +249,9 @@ article.archive div.meta {
   color: #444;
   margin-top: 0;
 }
+
+p.more {
+  border-bottom: 1px solid #eee;
+  margin: 0 -10px;
+  padding: 0 10px 20px;
+}
