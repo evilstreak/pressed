@@ -14,7 +14,7 @@ body {
   width: 620px;
 }
 
-h1 {
+article h1 {
   color: #000;
   font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
   margin: 21px 0;
@@ -71,7 +71,7 @@ a {
 }
 
 a:hover {
-  background: #18d;
+  background: #f81;
   color: #fff;
   text-decoration: none;
 }
@@ -115,6 +115,67 @@ header h1 {
 header p {
   font-size: 12px;
   margin: 0 0 0 50px;
+}
+
+/* aside */
+
+aside {
+  border-top: 10px solid #eee;
+}
+
+aside section {
+  padding-top: 21px;
+  width: 300px;
+}
+
+aside section.tags {
+  float: right;
+}
+
+aside section.tags h1 {
+  color: #ccc;
+  float: left;
+  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  margin: 0 5px 0 0;
+  text-transform: uppercase;
+}
+
+aside section.tags li {
+  display: inline;
+  font-size: 11px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+aside section.tags a {
+  background: #18d;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  float: left;
+  line-height: 15px;
+  margin: 3px 1px;
+  padding: 0 3px 0 6px;
+  text-decoration: none;
+}
+
+aside section.tags a span {
+  background: rgba( 255, 255, 255, 0.7 );
+  border-radius: 5px;
+  color: #18d;
+  display: inline-block;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 11px;
+  padding: 0 3px;
+}
+
+aside section.tags a:hover {
+  background: #f81;
+}
+
+aside section.tags a:hover span {
+  color: #f81;
 }
 
 /* footer */
