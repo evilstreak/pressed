@@ -1,12 +1,23 @@
 [% WRAPPER templates/_wrapper.tt
    title = "evilstreak.co.uk" %]
-[% FOREACH p IN recent %]
-  <article>
-    <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
-    [% IF p.short %]
-      [% p.short %]
-      <p class="more"><a href="[% juice.urlFor( "/b/", p._id ) %]">Read the rest &raquo;</a></p>
-    [% ELSE; GET p.content; END %]
-  </article>
-[% END %]
+<section class="archive">
+  [% FOREACH p IN recent %]
+    <article>
+      <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
+      <div class="meta">
+        <p>[% juice.short_date( p.published ) %]</p>
+        <ul class="tags">
+          [% FOREACH t IN p.tags %]
+            <li><a href="[% juice.urlFor( "/tags/", t ) %]">
+              [% t %]</a></li>
+          [% END %]
+        </ul>
+      </div>
+      [% IF p.short %]
+        [% p.short %]
+        <p class="more"><a href="[% juice.urlFor( "/b/", p._id ) %]">Read the rest &raquo;</a></p>
+      [% ELSE; GET p.content; END %]
+    </article>
+  [% END %]
+</section>
 [% END %]

@@ -99,7 +99,7 @@ strong {
 div.meta {
   color: #666;
   font-size: 12px;
-  margin-top: 42px;
+  margin: 42px 0 0;
 }
 
 div.meta p {
@@ -138,6 +138,8 @@ header p {
 
 aside {
   border-top: 10px solid #eee;
+  margin: 0 -10px;
+  padding: 0 10px;
 }
 
 aside section {
@@ -176,6 +178,7 @@ aside section.recent li {
 footer {
   background: #eee;
   border-radius: 5px 5px 0 0;
+  clear: both;
   font-size: 12px;
   line-height: 20px;
   margin: 21px -10px 0;
@@ -239,15 +242,19 @@ ul.tags a:hover span {
 
 /* archives */
 
-article.archive h2 {
+section.archive h2 {
   font-weight: normal;
   margin: 21px 0 0;
   padding: 0;
 }
 
-article.archive div.meta {
+section.archive h1 {
+  margin-bottom: 0;
+}
+
+section.archive div.meta {
   color: #444;
-  margin-top: 0;
+  margin: 0 0 21px;
 }
 
 p.more {

@@ -1,23 +1,21 @@
 [% WRAPPER templates/_wrapper.tt
    title = "tag - My blog" %]
-<article class="archive">
+<section class="archive">
   <h1>Posts tagged with <strong>[% tag %]</strong></h1>
 
-  <ul>
-    [% FOREACH p IN posts %]
-      <li>
-        <h2><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h2>
-        <div class="meta">
-          <p>[% juice.short_date( p.published ) %]</p>
-          <ul class="tags">
-            [% FOREACH t IN p.tags %]
-              <li><a href="[% juice.urlFor( "/tags/", t ) %]">
-                [% t %]</a></li>
-            [% END %]
-          </ul>
-        </div>
-      </li>
-    [% END %]
-  </ul>
-</article>
+  [% FOREACH p IN posts %]
+    <article>
+      <h2><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h2>
+      <div class="meta">
+        <p>[% juice.long_date( p.published ) %]</p>
+        <ul class="tags">
+          [% FOREACH t IN p.tags %]
+            <li><a href="[% juice.urlFor( "/tags/", t ) %]">
+              [% t %]</a></li>
+          [% END %]
+        </ul>
+      </div>
+    </article>
+  [% END %]
+</section>
 [% END %]

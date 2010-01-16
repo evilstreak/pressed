@@ -12,7 +12,7 @@
     <a href="http://www.pubstandards.co.uk/">beer-loving</a>,
     <a href="http://github.com/evilstreak">code-writing</a>,
     London-based
-    <a href="http://dominicbaggott.com/">web developer</a>.
+    <a href="http://dominicbaggott.com/">web developer</a>.</p>
   </header>
 
   [% content %]
