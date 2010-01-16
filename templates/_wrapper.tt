@@ -6,7 +6,13 @@
 </head>
 <body>
   <header>
-    <a href="[% juice.urlFor( "/" ) %]">Pressed</a>
+    <img src="http://gravatar.com/avatar/76b802165c7c55b9c719495d5e4dbf48&s=42" height="42" width="42">
+    <h1><a href="[% juice.urlFor( "/" ) %]">evilstreak.co.uk</a></h1>
+    <p>The home of Dominic Baggott, a
+    <a href="http://www.pubstandards.co.uk/">beer-loving</a>,
+    <a href="http://github.com/evilstreak">code-writing</a>,
+    London-based
+    <a href="http://dominicbaggott.com/">web developer</a>.
   </header>
 
   [% content %]
