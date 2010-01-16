@@ -71,7 +71,7 @@ a {
 }
 
 a:hover {
-  background: #f81;
+  background: #18d;
   color: #fff;
   text-decoration: none;
 }
@@ -171,11 +171,11 @@ aside section.tags a span {
 }
 
 aside section.tags a:hover {
-  background: #f81;
+  background: #000;
 }
 
 aside section.tags a:hover span {
-  color: #f81;
+  color: #000;
 }
 
 /* footer */
