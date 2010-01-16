@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blog posts</title>
-  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <h1>Blog posts</h1>
+[% WRAPPER templates/_wrapper.tt
+   title = "tag - My blog" %]
+  <h1>Posts tagged with [% tag %]</h1>
 
   [% FOREACH p IN posts %]
     <article>
@@ -18,5 +13,4 @@
       </ul>
     </article>
   [% END %]
-</body>
-</html>
+[% END %]

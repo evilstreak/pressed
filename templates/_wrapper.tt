@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>[% title %]</title>
+  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <a href="[% juice.urlFor( "/" ) %]">Pressed</a>
+  </header>
+
+  [% content %]
+
+  <aside>
+    <section>
+      <h1>Tags</h1>
+      <ul>
+        [% FOREACH t IN tags %]
+          <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
+            [% t.key %] ([% t.value %])</a></li>
+        [% END %]
+      </ul>
+    </section>
+  </aside>
+
+  <footer>
+    <p>This blog is running on
+    <a href="http://github.com/evilstreak/pressed">Pressed</a>, a
+    blog app written for <a href="http://juicejs.org">Juice</a>.</p>
+  </footer>
+</body>
+</html>

@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>[% post.title %] - My blog</title>
-  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <article>
-    <h1>[% post.title %]</h1>
+[% WRAPPER templates/_wrapper.tt
+   title = "post.title - My blog" %]
+<article>
+  <h1>[% post.title %]</h1>
 
-    [% post.content %]
-  <article>
-
-  <aside>
-    <section>
-      <h1>Tags</h1>
-      <ul>
-        [% FOREACH t IN tags %]
-          <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
-            [% t.key %] ([% t.value %])</a></li>
-        [% END %]
-      </ul>
-  </aside>
-</body>
-</html>
+  [% post.content %]
+<article>
+[% END %]
