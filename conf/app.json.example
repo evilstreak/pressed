@@ -1,5 +1,5 @@
 {
-  "files" : "/Users/dom/blog",
+  "files" : "/path/to/text/files",
   "db" : {
     "host" : "localhost",
     "collection" : "local.blog"
