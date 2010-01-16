@@ -140,26 +140,39 @@ aside section.tags h1 {
   text-transform: uppercase;
 }
 
-aside section.tags li {
+
+/* tags */
+
+ul.tags {
   display: inline;
+  margin: 0;
+}
+
+ul.tags li {
+  display: inline-block;
   font-size: 11px;
   list-style: none;
+  position: relative;
+  top: -1px;
   white-space: nowrap;
 }
 
-aside section.tags a {
+ul.tags a {
   background: #18d;
   border-radius: 10px;
   color: #fff;
-  display: block;
-  float: left;
+  display: inline-block;
   line-height: 15px;
-  margin: 3px 1px;
-  padding: 0 3px 0 6px;
+  margin: 3px 0;
+  padding: 0 6px;
   text-decoration: none;
 }
 
-aside section.tags a span {
+aside section.tags ul.tags a {
+  padding-right: 3px;
+}
+
+ul.tags a span {
   background: rgba( 255, 255, 255, 0.7 );
   border-radius: 5px;
   color: #18d;
@@ -170,11 +183,11 @@ aside section.tags a span {
   padding: 0 3px;
 }
 
-aside section.tags a:hover {
+ul.tags a:hover {
   background: #000;
 }
 
-aside section.tags a:hover span {
+ul.tags a:hover span {
   color: #000;
 }
 

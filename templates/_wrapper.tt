@@ -20,7 +20,7 @@
   <aside>
     <section class="tags">
       <h1>Tags</h1>
-      <ul>
+      <ul class="tags">
         [% FOREACH t IN tags %]
           <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
             [% t.key %] <span>[% t.value %]</span></a></li>
