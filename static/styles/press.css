@@ -140,6 +140,20 @@ aside section.tags h1 {
   text-transform: uppercase;
 }
 
+aside section.recent {
+  float: left;
+}
+
+aside section.recent h1 {
+  color: #ccc;
+  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+
+aside section.recent li {
+  font-size: 12px;
+}
+
 
 /* tags */
 
