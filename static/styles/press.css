@@ -90,12 +90,23 @@ strong {
   font-weight: bold;
 }
 
+div.meta {
+  color: #666;
+  font-size: 12px;
+  margin-top: 42px;
+}
+
+div.meta p {
+  display: inline;
+  margin: 0;
+}
+
 /* header */
 
 header {
   background: #eee;
   border-radius: 0 0 5px 5px;
-  margin: 0 -10px 21px;
+  margin: 0 -10px;
   overflow: auto;
   padding: 10px;
 }
@@ -154,6 +165,21 @@ aside section.recent li {
   font-size: 12px;
 }
 
+/* footer */
+
+footer {
+  background: #eee;
+  border-radius: 5px 5px 0 0;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 21px -10px 0;
+  overflow: auto;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
 
 /* tags */
 
@@ -205,18 +231,15 @@ ul.tags a:hover span {
   color: #000;
 }
 
-/* footer */
+/* archives */
 
-footer {
-  background: #eee;
-  border-radius: 5px 5px 0 0;
-  font-size: 12px;
-  line-height: 20px;
-  margin: 21px -10px 0;
-  overflow: auto;
-  padding: 10px;
+article.archive h2 {
+  font-weight: normal;
+  margin: 21px 0 0;
+  padding: 0;
 }
 
-footer p {
-  margin: 0;
+article.archive div.meta {
+  color: #444;
+  margin-top: 0;
 }

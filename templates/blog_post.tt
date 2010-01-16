@@ -4,5 +4,15 @@
   <h1>[% post.title %]</h1>
 
   [% post.content %]
+
+  <div class="meta">
+    <p>This article was penned on [% juice.long_date( post.published ) %] and tagged with</p>
+    <ul class="tags">
+      [% FOREACH t IN post.tags %]
+        <li><a href="[% juice.urlFor( "/tags/", t ) %]">
+          [% t %]</a></li>
+      [% END %]
+    </ul>
+  </div>
 </article>
 [% END %]
