@@ -4,6 +4,9 @@
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: inherit; }
 strong, em, code { font-style: inherit; font-weight: inherit; }
 
+/* html5 shimming */
+header, footer, section, article, aside { display: block; }
+
 /* site wide */
 
 body {
@@ -16,7 +19,7 @@ body {
 
 article h1 {
   color: #000;
-  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  font: 300 36px/42px "HelveticaNeue-Light", "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
   margin: 21px 0;
 }
 
@@ -112,6 +115,8 @@ div.meta p {
 header {
   background: #eee;
   border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
   margin: 0 -10px;
   overflow: auto;
   padding: 10px;
@@ -119,6 +124,8 @@ header {
 
 header img {
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   display: block;
   float: left;
 }
@@ -154,7 +161,7 @@ aside section.tags {
 aside section.tags h1 {
   color: #ccc;
   float: left;
-  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  font: 300 36px/42px "HelveticaNeue-Light", "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
   margin: 0 5px 0 0;
   text-transform: uppercase;
 }
@@ -165,7 +172,7 @@ aside section.recent {
 
 aside section.recent h1 {
   color: #ccc;
-  font: 300 36px/42px "HelveticaNeue-Light" "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
+  font: 300 36px/42px "HelveticaNeue-Light", "Helvetica Neue", "Trebuchet MS", "Arial", "Helvetica", sans-serif;
   text-transform: uppercase;
 }
 
@@ -178,6 +185,8 @@ aside section.recent li {
 footer {
   background: #eee;
   border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
   clear: both;
   font-size: 12px;
   line-height: 20px;
@@ -209,6 +218,8 @@ ul.tags li {
 ul.tags a {
   background: #18d;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   color: #fff;
   display: inline-block;
   line-height: 15px;
@@ -224,6 +235,8 @@ aside section.tags ul.tags a {
 ul.tags a span {
   background: rgba( 255, 255, 255, 0.7 );
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   color: #18d;
   display: inline-block;
   font-size: 9px;
