@@ -1,4 +1,4 @@
-[% WRAPPER templates/_wrapper.tt
+[% WRAPPER _wrapper.tt
    title = "post.title - My blog" %]
 <article>
   <h1>[% post.title %]</h1>

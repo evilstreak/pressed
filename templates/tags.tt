@@ -1,4 +1,4 @@
-[% WRAPPER templates/_wrapper.tt
+[% WRAPPER _wrapper.tt
    title = "tag - My blog" %]
 <section class="archive">
   <h1>Posts tagged with <strong>[% tag %]</strong></h1>
