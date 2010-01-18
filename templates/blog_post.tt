@@ -1,5 +1,6 @@
-[% WRAPPER _wrapper.tt
-   title = "post.title - My blog" %]
+[% SET t = post.title _ " - evilstreak.co.uk";
+   WRAPPER _wrapper.tt
+   title = t %]
 <article>
   <h1>[% post.title %]</h1>
 

@@ -1,5 +1,6 @@
-[% WRAPPER _wrapper.tt
-   title = "tag - My blog" %]
+[% SET t = tag _ " - evilstreak.co.uk";
+   WRAPPER _wrapper.tt
+   title = t %]
 <section class="archive">
   <h1>Posts tagged with <strong>[% tag %]</strong></h1>
 
