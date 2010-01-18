@@ -5,46 +5,12 @@
   <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <header>
-    <img src="http://gravatar.com/avatar/76b802165c7c55b9c719495d5e4dbf48?s=42" height="42" width="42">
-    <h1><a href="[% juice.urlFor( "/" ) %]">evilstreak.co.uk</a></h1>
-    <p>The home of Dominic Baggott, a
-    <a href="http://www.pubstandards.co.uk/">beer-drinking</a>,
-    <a href="http://github.com/evilstreak">code-writing</a>,
-    London-based
-    <a href="http://dominicbaggott.com/">web developer</a>.</p>
-  </header>
+  [% INCLUDE _header.tt %]
 
   [% content %]
 
-  <aside>
-    <section class="tags">
-      <h1>Tags</h1>
-      <ul class="tags">
-        [% FOREACH t IN tags %]
-          <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
-            [% t.key %] <span>[% t.value %]</span></a></li>
-        [% END %]
-      </ul>
-    </section>
+  [% INCLUDE _aside.tt %]
 
-    <section class="recent">
-      <h1>Recent</h1>
-      <ul>
-        [% FOREACH r IN recent %]
-          <li>
-            <a href="[% juice.urlFor( "/b/", r._id ) %]">[% r.title %]</a>
-            <span>[% juice.short_date( r.published ) %]</span>
-          </li>
-        [% END %]
-      </ul>
-    </section>
-  </aside>
-
-  <footer>
-    <p>This blog is running on
-    <a href="http://github.com/evilstreak/pressed">Pressed</a>, a
-    blog app written for <a href="http://juicejs.org">Juice</a>.</p>
-  </footer>
+  [% INCLUDE _footer.tt %]
 </body>
 </html>

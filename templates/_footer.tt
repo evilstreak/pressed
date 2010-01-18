@@ -1,0 +1,5 @@
+<footer>
+  <p>This blog is running on
+  <a href="http://github.com/evilstreak/pressed">Pressed</a>, a
+  blog app written for <a href="http://juicejs.org">Juice</a>.</p>
+</footer>

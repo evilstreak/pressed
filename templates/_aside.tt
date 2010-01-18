@@ -1,0 +1,23 @@
+<aside>
+  <section class="tags">
+    <h1>Tags</h1>
+    <ul class="tags">
+      [% FOREACH t IN tags %]
+        <li><a href="[% juice.urlFor( "/tags/", t.key ) %]">
+          [% t.key %] <span>[% t.value %]</span></a></li>
+      [% END %]
+    </ul>
+  </section>
+
+  <section class="recent">
+    <h1>Recent</h1>
+    <ul>
+      [% FOREACH r IN recent %]
+        <li>
+          <a href="[% juice.urlFor( "/b/", r._id ) %]">[% r.title %]</a>
+          <span>[% juice.short_date( r.published ) %]</span>
+        </li>
+      [% END %]
+    </ul>
+  </section>
+</aside>
