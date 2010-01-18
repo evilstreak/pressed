@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>[% title %]</title>
-  <link href="[% juice.urlFor( "/styles/press.css" ) %]" rel="stylesheet" type="text/css">
+  <link href="[% juice.urlFor( "/styles/pressed.css" ) %]" rel="stylesheet" type="text/css">
 </head>
 <body>
   [% INCLUDE _header.tt %]
