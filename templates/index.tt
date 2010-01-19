@@ -3,7 +3,7 @@
 <section class="archive">
   [% FOREACH p IN recent %]
     <article>
-      <h1><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h1>
+      <h1><a href="[% juice.urlFor( "/", p._id ) %]">[% p.title %]</a></h1>
       <div class="meta">
         <p>[% juice.short_date( p.published ) %]</p>
         <ul class="tags">
@@ -15,7 +15,7 @@
       </div>
       [% IF p.short %]
         [% p.short %]
-        <p class="more"><a href="[% juice.urlFor( "/b/", p._id ) %]">Read the rest &raquo;</a></p>
+        <p class="more"><a href="[% juice.urlFor( "/", p._id ) %]">Read the rest &raquo;</a></p>
       [% ELSE; GET p.content; END %]
     </article>
   [% END %]

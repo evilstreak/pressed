@@ -6,7 +6,7 @@
 
   [% FOREACH p IN posts %]
     <article>
-      <h2><a href="[% juice.urlFor( "/b/", p._id ) %]">[% p.title %]</a></h2>
+      <h2><a href="[% juice.urlFor( "/", p._id ) %]">[% p.title %]</a></h2>
       <div class="meta">
         <p>[% juice.long_date( p.published ) %]</p>
         <ul class="tags">

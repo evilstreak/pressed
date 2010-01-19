@@ -14,7 +14,7 @@
     <ul>
       [% FOREACH r IN recent %]
         <li>
-          <a href="[% juice.urlFor( "/b/", r._id ) %]">[% r.title %]</a>
+          <a href="[% juice.urlFor( "/", r._id ) %]">[% r.title %]</a>
           <span>[% juice.short_date( r.published ) %]</span>
         </li>
       [% END %]
