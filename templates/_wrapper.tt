@@ -10,9 +10,10 @@
   </script>
 </head>
 <body>
+  [% IF juice.google_analytics %]
   <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-267102-1']);
+    _gaq.push(['_setAccount', '[% juice.google_analytics %]']);
     _gaq.push(['_trackPageview']);
 
     (function() {
@@ -21,6 +22,7 @@
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
     })();
   </script>
+  [% END %]
 
   [% INCLUDE _header.tt %]
 
