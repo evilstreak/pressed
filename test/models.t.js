@@ -28,21 +28,7 @@ var a = { _id : "a", title : "Apple", tags : [ "one", "two", "three" ], publishe
     f = { _id : "f", title : "Chicken", tags : [ "gamma" ], published : tomorrow },
     g = { _id : "g", title : "Dandelion", tags : [ "delta" ] };
 
-function setup( set ) {
-  var data = [];
-
-  switch ( set ) {
-    case 1 :
-      // case 1 is an empty set
-      break;
-    case 2 :
-      data = [ a, b, c ];
-      break;
-    case 3 :
-      data = [ d, e, f, g ];
-      break;
-  }
-
+function setup( data ) {
   // clear out what's there
   mongo.remove( "test.blog" );
 
@@ -59,27 +45,27 @@ exports.tests = {};
 
 exports.tests.test_Tags = {
   test_all : function() {
-    setup( 1 );
+    setup( [] );
     asserts.same( Tags.all(), {}, "Empty object if all posts are untagged" );
 
-    setup( 2 );
+    setup( [ a, b, c ] );
     asserts.same( Tags.all(), { one : 1, two : 2, three : 3 }, "Tag counts correct" );
 
-    setup( 3 );
+    setup( [ d, e, f, g ] );
     asserts.same( Tags.all(), { alpha : 1, beta : 1 }, "Ignores unpublished posts" );
   }
 }
 
 exports.tests.test_Posts = {
   test_by_id : function() {
-    setup( 2 );
+    setup( [ a, b, c ] );
     asserts.same( Posts.by_id( "a" ), a, "Returns correct post" );
     asserts.same( Posts.by_id( "z" ), null, "Returns null when the id doesn't exist" );
     asserts.same( Posts.by_id(), null, "Returns null if no id is given" );
   },
 
   test_by_tags : function() {
-    setup( 2 );
+    setup( [ a, b, c ] );
     // single tags
     asserts.same( Posts.by_tags( [ "zero" ] ), [], "Returns no matching posts" );
     asserts.same( Posts.by_tags( [ "one" ] ), [ a ], "Returns the only matching post" );
@@ -89,7 +75,7 @@ exports.tests.test_Posts = {
     asserts.same( Posts.by_tags( [ "one", "two", "three" ] ), [ a ], "Returns posts matching all three tags" );
     asserts.same( Posts.by_tags( [ "one", "two", "three" ], true ), [ a, b, c ], "Returns posts matching any one tag" );
 
-    setup( 3 );
+    setup( [ d, e, f, g ] );
     // unpublished
     asserts.same( Posts.by_tags( [ "gamma" ] ), [], "Doesn't return future posts" );
     asserts.same( Posts.by_tags( [ "delta" ] ), [], "Doesn't return draft posts" );
