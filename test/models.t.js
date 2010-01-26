@@ -85,6 +85,29 @@ exports.tests.test_Posts = {
     // unpublished
     asserts.same( Posts.by_tags( [ "gamma" ] ), [], "Doesn't return future posts" );
     asserts.same( Posts.by_tags( [ "delta" ] ), [], "Doesn't return draft posts" );
+  },
+
+  test_recent : function() {
+    setup( [] );
+    asserts.same( Posts.recent(), [], "Returns an empty array if no posts exist" );
+
+    setup( [ f, g ] );
+    asserts.same( Posts.recent(), [], "Returns an empty array if only unpublished posts exist" );
+
+    setup( [ a, b, c ] );
+    asserts.same( Posts.recent(), [ c, b, a ], "Returns posts by published order" );
+  },
+
+  test_by_date : function() {
+    setup( [ h, i, j, k, l ] );
+    // just a year
+    asserts.same( Posts.by_date( 1999 ), [], "Returns no posts for 1999" );
+    asserts.same( Posts.by_date( 2000 ), [ k, j, i, h ], "Returns 4 (ordered) posts for 2000" );
+    asserts.same( Posts.by_date( 2001 ), [ l ], "Returns 1 post for 2001" );
+
+    asserts.same( Posts.by_date( 2000, 8 ), [], "Returns no posts for August 2000" );
+    asserts.same( Posts.by_date( 2000, 9 ), [ i, h ], "Returns 2 posts for September 2000" );
+    asserts.same( Posts.by_date( 2000, 10 ), [ k, j ], "Returns 2 posts for October 2000" );
   }
 }
 
