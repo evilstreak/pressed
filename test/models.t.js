@@ -102,12 +102,12 @@ exports.tests.test_Posts = {
     setup( [ h, i, j, k, l ] );
     // just a year
     asserts.same( Posts.by_date( 1999 ), [], "Returns no posts for 1999" );
-    asserts.same( Posts.by_date( 2000 ), [ k, j, i, h ], "Returns 4 (ordered) posts for 2000" );
+    asserts.same( Posts.by_date( 2000 ), [ h, i, j, k ], "Returns 4 (ordered) posts for 2000" );
     asserts.same( Posts.by_date( 2001 ), [ l ], "Returns 1 post for 2001" );
 
     asserts.same( Posts.by_date( 2000, 8 ), [], "Returns no posts for August 2000" );
-    asserts.same( Posts.by_date( 2000, 9 ), [ i, h ], "Returns 2 posts for September 2000" );
-    asserts.same( Posts.by_date( 2000, 10 ), [ k, j ], "Returns 2 posts for October 2000" );
+    asserts.same( Posts.by_date( 2000, 9 ), [ h, i ], "Returns 2 posts for September 2000" );
+    asserts.same( Posts.by_date( 2000, 10 ), [ j, k ], "Returns 2 posts for October 2000" );
   }
 }
 
