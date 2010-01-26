@@ -23,10 +23,15 @@ last_week.setDate( last_week.getDate() - 7 );
 var a = { _id : "a", title : "Apple", tags : [ "one", "two", "three" ], published : last_week },
     b = { _id : "b", title : "Beetroot", tags : [ "two", "three" ], published : yesterday },
     c = { _id : "c", title : "Chicken", tags : [ "three" ], published : today },
-    d = { _id : "d", title : "Apple", tags : [ "alpha" ], published : yesterday },
-    e = { _id : "e", title : "Beetroot", tags : [ "beta" ], published : today },
-    f = { _id : "f", title : "Chicken", tags : [ "gamma" ], published : tomorrow },
-    g = { _id : "g", title : "Dandelion", tags : [ "delta" ] };
+    d = { _id : "d", title : "Dandelion", tags : [ "alpha" ], published : yesterday },
+    e = { _id : "e", title : "Elephant", tags : [ "beta" ], published : today },
+    f = { _id : "f", title : "Fuschia", tags : [ "gamma" ], published : tomorrow },
+    g = { _id : "g", title : "Gargoyle", tags : [ "delta" ] },
+    h = { _id : "h", title : "Hotel", published : new Date( "1 September, 2000" ) },
+    i = { _id : "i", title : "Igloo", published : new Date( "2 September, 2000" ) },
+    j = { _id : "j", title : "Jelly", published : new Date( "1 October, 2000" ) },
+    k = { _id : "k", title : "Kerosene", published : new Date( "2 October, 2000" ) },
+    l = { _id : "l", title : "Lamentable", published : new Date( "3 March, 2001" ) };
 
 function setup( data ) {
   // clear out what's there
@@ -45,7 +50,7 @@ exports.tests = {};
 
 exports.tests.test_Tags = {
   test_all : function() {
-    setup( [] );
+    setup( [ h, i, j ] );
     asserts.same( Tags.all(), {}, "Empty object if all posts are untagged" );
 
     setup( [ a, b, c ] );
