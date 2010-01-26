@@ -74,11 +74,12 @@ exports.tests.test_Posts = {
     // single tags
     asserts.same( Posts.by_tags( [ "zero" ] ), [], "Returns no matching posts" );
     asserts.same( Posts.by_tags( [ "one" ] ), [ a ], "Returns the only matching post" );
-    asserts.same( Posts.by_tags( [ "two" ] ), [ a, b ], "Returns all matching posts" );
+    asserts.same( Posts.by_tags( [ "two" ] ), [ b, a ], "Returns all matching posts" );
+    asserts.same( Posts.by_tags( [ "three" ] ), [ c, b, a ], "Returns posts in published order" );
 
     // multiple tags
     asserts.same( Posts.by_tags( [ "one", "two", "three" ] ), [ a ], "Returns posts matching all three tags" );
-    asserts.same( Posts.by_tags( [ "one", "two", "three" ], true ), [ a, b, c ], "Returns posts matching any one tag" );
+    asserts.same( Posts.by_tags( [ "one", "two", "three" ], true ), [ c, b, a ], "Returns posts matching any one tag" );
 
     setup( [ d, e, f, g ] );
     // unpublished
