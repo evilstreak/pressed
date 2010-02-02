@@ -6,7 +6,9 @@
   <updated>[% feed.updated %]</updated>
   <author>
     <name>[% feed.author.name %]</name>
+[% IF feed.author.email -%]
     <email>[% feed.author.email %]</email>
+[% END -%]
   </author>
   <id>[% feed.id %]</id>
 
