@@ -1,0 +1,10 @@
+{
+  "domain" : "evilstreak.co.uk",
+  "title" : "evilstreak.co.uk - blog",
+  "link" : "http://evilstreak.co.uk/",
+  "author" : {
+    "name" : "Dominic Baggott",
+    "email" : "dominic.baggott@gmail.com"
+  },
+  "id" : "http://evilstreak.co.uk/blog/feed"
+}

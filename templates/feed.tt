@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>[% feed.title %]</title>
+  <link href="[% feed.link %]" />
+  <updated>[% feed.updated %]</updated>
+  <author>
+    <name>[% feed.author.name %]</name>
+    <email>[% feed.author.email %]</email>
+  </author>
+  <id>[% feed.id %]</id>
+
+  [%- FOR post IN posts %]
+    <entry>
+      <title>[% post.title %]</title>
+      <link href="[% post.link %]" />
+      <id>[% post.id %]</id>
+      <updated>[% post.updated %]</updated>
+      <published>[% post.published %]</published>
+      <summary type="html">[% post.content | html %]</summary>
+    </entry>
+  [%- END %]
+
+</feed>
