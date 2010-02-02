@@ -7,7 +7,13 @@
   [% post.content %]
 
   <div class="meta">
-    <p>Penned on [% juice.long_date( post.published ) %], tagged with</p>
+    <p>
+      [%~ IF post.published ~%]
+        Penned on [% juice.short_date( post.published ) %]
+      [%~ ELSE ~%]
+        Draft
+      [%~ END =%]
+    tagged with</p>
     <ul class="tags">
       [% FOREACH t IN post.tags %]
         <li><a href="[% juice.urlFor( "/tags/", t ) %]">
